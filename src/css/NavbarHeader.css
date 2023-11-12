@@ -1,0 +1,67 @@
+*{
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+.nav-container{
+    width: 100%;
+    background-color: #161617cc;
+    display: flex;
+    min-width: 300px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 22px;
+    height: 44px;
+    z-index: 0;
+}
+
+.nav-list{
+    display: flex;
+    max-width: 1000px;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 2;
+}
+.nav-element a{
+    color: #ffffff9e;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    text-decoration: none;
+    height: 44px;
+    z-index: 3;
+    transition: color 0.2s ease-in-out;
+}
+.nav-element a:hover{
+    color: white;
+}
+.nav-element a svg:hover{
+    color: white !important;
+}
+.menu-dropDown-container {
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    z-index: -1;
+    visibility: hidden;
+    height: 44px;
+    left: 0;
+    top: 0;
+}
+
+.menu-dropDown-container.shown {
+    height: 66.67vh; 
+    visibility: visible;
+    transition: height 0.5s ease-in-out, visibility 0.5s step-start;
+}
+
+.menu-dropDown-container.hidden{
+    visibility: hidden;
+    height: 44px;
+    transition: height 0.5s ease-in-out, visibility 0.5s step-end;
+}
+
+
+
+
+

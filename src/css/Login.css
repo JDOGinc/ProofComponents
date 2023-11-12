@@ -1,0 +1,126 @@
+/* Estilos para el contenedor del formulario de inicio de sesión */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Estilo para los campos de entrada y etiquetas */
+  .form-group {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Estilo para el botón de inicio de sesión y registro */
+  .button-form-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Mostrar los botones en una columna en dispositivos pequeños */
+  }
+  
+  .login-button, .register-button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%; /* Los botones ocuparán el ancho completo del contenedor */
+  }
+  
+  .login-button {
+    background-color: #007BFF;
+    color: #fff;
+  }
+  
+  .register-button {
+    background-color: #ccc;
+    color: #333;
+    opacity: 0.7;
+  }
+  
+  .register-button:hover {
+    background-color: #999; /* Cambio de color en el hover */
+  }
+  
+/* Estilo para el botón de recordar */
+.toggle-label {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #333;
+    font-weight: 300;
+    margin-top: 0px;
+  }
+  
+  .toggle-input {
+    display: none; /* Oculta el input por defecto */
+  }
+  
+  .toggle-ios {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .toggle-ios:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+  }
+  
+  .toggle-input:checked + .toggle-ios {
+    background-color: #007BFF;
+  }
+  
+  .toggle-input:checked + .toggle-ios:before {
+    transform: translateX(20px);
+    background-color: #fff;
+    top: 9%;
+  }
+  
+
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .login-container {
+        max-width: 95%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-container {
+      max-width: 95%;
+      padding: 10px;
+    }
+    /* Otras modificaciones de estilo específicas para dispositivos pequeños, si es necesario */
+  }
+  
