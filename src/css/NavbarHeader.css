@@ -52,16 +52,24 @@
 .menu-dropDown-container.shown {
     height: 66.67vh; 
     visibility: visible;
-    transition: height 0.5s ease-in-out, visibility 0.5s step-start;
 }
 
 .menu-dropDown-container.hidden{
     visibility: hidden;
     height: 44px;
-    transition: height 0.5s ease-in-out, visibility 0.5s step-end;
 }
 
 
 
+.menu-dropDown-container.shownAnimation {
+    height: 66.67vh; 
+    visibility: visible;
+    transition: height 0.5s ease-in-out, visibility 0.5s step-start;
+}
 
+.menu-dropDown-container.hiddenAnimation{
+    visibility: hidden;
+    height: 44px;
+    transition: height 0.5s ease-in-out, visibility 0.5s step-end;
+}
 
