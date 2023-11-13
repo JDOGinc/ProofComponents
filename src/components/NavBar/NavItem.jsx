@@ -38,8 +38,6 @@ export function NavElement({ label, canAnimate, setCanAnimate, menuActive, setMe
     setMenuActive(null)
     setPrevMenuActive(null)
   }
-
-  
     return (
       <li className='nav-element'>
         <a className={`nav-link ${menuActive === label ? 'active' : ''}`}
