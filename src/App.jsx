@@ -1,5 +1,4 @@
-import Login from './components/Login';
-import NavBarHeader from './components/NavbarHeader';
+import NavBarHeader from './components/NavBar/NavbarHeader';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMagnifyingGlass, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { faApple } from '@fortawesome/free-brands-svg-icons'

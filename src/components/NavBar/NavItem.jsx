@@ -1,19 +1,21 @@
-export function NavElement({ label, canAnimate, setCanAnimate, menuActive, setMenuActive, prevMenuActive, setPrevMenuActive  }) {
+import { Children } from "react";
+
+export function NavElement({ label, canAnimate, setCanAnimate, menuActive, setMenuActive, prevMenuActive, setPrevMenuActive, children }) {
 
   const menuDropDownClass = () => {
     console.log(menuActive, label, canAnimate)
     if (menuActive === label) {
       if(canAnimate){
-        return ' shownAnimation';
+        return 'shownAnimation';
       }
-      return ' shown'
+      return 'shown'
     } else if (menuActive == null ) {
       if(canAnimate){
-        return ' hiddenAnimation'
+        return 'hiddenAnimation'
       }
-      return ' hidden';
+      return 'hidden';
     } else if (menuActive !== label) {
-      return ' hidden';
+      return 'hidden';
     }
     return ''
   }
@@ -40,13 +42,13 @@ export function NavElement({ label, canAnimate, setCanAnimate, menuActive, setMe
   
     return (
       <li className='nav-element'>
-        <a
+        <a className={`nav-link ${menuActive === label ? 'active' : ''}`}
           onMouseEnter={() => setStates(label)}
           href="#">{label}</a>
         <div
           className={`menu-dropDown-container ${menuDropDownClass()}`}
-          onMouseLeave={() => resetStates()}
-         >
+          onMouseLeave={() => resetStates()}>
+          {children}
         </div>
       </li>
     );
