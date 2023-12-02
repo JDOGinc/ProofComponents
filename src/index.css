@@ -22,7 +22,7 @@
 body {
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 200vh;
   margin: 0;
   background: #f0f0f0; /* Color de fondo de la página */
 }

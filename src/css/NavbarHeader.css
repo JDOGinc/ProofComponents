@@ -25,7 +25,13 @@ a{
     max-width: 1000px;
     justify-content: space-between;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
+}
+.nav-element-container{
+    display: flex;
+    align-items: center;
+    width: 85%;
+    justify-content: space-between;
 }
 .nav-element .nav-link{
     color: #ffffff9e;
@@ -33,7 +39,7 @@ a{
     align-items: center;
     font-size: 12px;
     height: 44px;
-    z-index: 3;
+    z-index: 4;
     transition: color 0.2s ease-in-out;
 }
 .nav-link.active{
@@ -49,7 +55,7 @@ a{
     position: absolute;
     width: 100%;
     background-color: #161617;
-    z-index: -1;
+    z-index: 1;
     visibility: hidden;
     height: 44px;
     left: 0;
@@ -63,6 +69,10 @@ a{
 .menu-dropDown-container.shown {
     height: 66.67vh; 
     visibility: visible;
+}
+
+.hidden{
+    display: none;
 }
 
 .menu-dropDown-container.hidden{
@@ -94,4 +104,80 @@ a{
 
 .subMenu-element a{
     color: white;
+}
+.nav-element.bars-button{
+    display: none;
+    background: none;
+    border: 0;
+    z-index: 10;
+}
+.nav-element.bars-button svg:hover{
+    color: white !important;
+}
+.nav-element.bars-button.open svg{
+    color: white !important;
+}
+.icon-next{
+    display: none;
+}
+
+@media only screen and (max-width: 833px){
+    .icon-next{
+        display: block;
+        visibility: hidden;
+        opacity: 0.2;
+        transition: opacity 0.5s linear;
+    }
+    .nav-element:hover svg.icon-next{
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.5s linear;
+    }
+    .nav-element.apple{
+        width: 80%;
+    }
+    .nav-element.bars-button{
+        display: block;
+        cursor: pointer;
+    }
+    .nav-element-container {
+        visibility: hidden;
+        display: inline;
+        align-items: center;
+        width: 100%;
+        background: #161617;
+        padding-left: 44px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0%;
+        overflow: hidden !important;
+        transition: height 0.5s ease-in-out, visibility 0.5s step-start, padding 0.5s ease-in-out;
+    }
+    .nav-element-container.open{
+        padding: 44px 44px 84px 44px;
+        visibility: visible;    
+        height: 100%;
+    }
+    .nav-element-container .nav-element{
+        display: flex;
+        width: 100%;
+        height: 44px;
+        margin-bottom: 5px;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    .menu-dropDown-container{
+        padding-left: 44px;
+    }
+    .nav-element-container .nav-element .nav-link{
+        color: white;
+        font-size: 30px;
+    }
+    
+    .menu-dropDown-container.shownAnimation{
+        height: 100%;
+        z-index: 6;
+    }
 }
